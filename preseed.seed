@@ -38,7 +38,7 @@ d-i netcfg/choose_interface select auto
 
 # If you prefer to configure the network manually, uncomment this line and
 # the static network configuration below.
-#d-i netcfg/disable_autoconfig boolean true
+d-i netcfg/disable_autoconfig boolean true
 
 # If you want the preconfiguration file to work on systems both with and
 # without a dhcp server, uncomment these lines and the static network
@@ -49,11 +49,11 @@ d-i netcfg/choose_interface select auto
 # Static network configuration.
 #
 # IPv4 example
-#d-i netcfg/get_ipaddress string 192.168.1.42
-#d-i netcfg/get_netmask string 255.255.255.0
-#d-i netcfg/get_gateway string 192.168.1.1
-#d-i netcfg/get_nameservers string 192.168.1.1
-#d-i netcfg/confirm_static boolean true
+d-i netcfg/get_ipaddress string 192.168.100.99
+d-i netcfg/get_netmask string 255.255.255.0
+d-i netcfg/get_gateway string 192.168.100.1
+d-i netcfg/get_nameservers string 192.168.100.1
+d-i netcfg/confirm_static boolean true
 #
 # IPv6 example
 #d-i netcfg/get_ipaddress string fc00::2
@@ -65,8 +65,8 @@ d-i netcfg/choose_interface select auto
 # Any hostname and domain names assigned from dhcp take precedence over
 # values set here. However, setting the values still prevents the questions
 # from being shown, even if values come from dhcp.
-d-i netcfg/get_hostname string unassigned-hostname
-d-i netcfg/get_domain string unassigned-domain
+d-i netcfg/get_hostname string mudvolcano
+d-i netcfg/get_domain string mudvolcano
 
 # If you want to force a hostname, regardless of what either the DHCP
 # server returns or what the reverse DNS entry for the IP is, uncomment
